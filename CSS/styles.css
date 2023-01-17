@@ -1,5 +1,5 @@
 /*TODO:
-    Converter PX para VH e VW (view height e view width)
+    Converter PX para VH e VW (view height e view width) OU para rem...
 */
 *{
     font-family: sans-serif;
@@ -63,6 +63,15 @@ input{
     width: 100px;
     height: 30px;
     border: none;
+    border-radius: 20px;
+}
+
+input::placeholder{
+    color: rgb(197, 197, 197);
+}
+
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
 }
 
 #botao-calcular{
