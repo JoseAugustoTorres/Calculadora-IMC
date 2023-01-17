@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #3d274e;
-    margin: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 6%, rgba(37,100,95,1) 100%, rgba(0,212,255,1) 100%);    margin: 0;
 }
 
 section{
@@ -19,15 +19,15 @@ section{
 #corpo-aplicacao{
     display: grid;
     place-items: center;
-    background-color: #FFE19C;
+    background-color: #7cd7cf;
     height: 540px;
     width: 400px;
-    border: 4px solid #DB9D47;
+    border: 4px solid #e1ecd6;
     border-radius: 20px;
 }
 
 #titulo{
-    border-bottom: 4px solid #DB9D47;
+    border-bottom: 4px solid #fffedf;
     color: rgb(51, 51, 51);
     font-size: 27px;
     font-weight: bold;
@@ -37,22 +37,24 @@ section{
 }
 
 .entrada{
-    background-color:#FF784F;
+    background-color:#e1ecd6;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 68%;
     border-radius: 20px;
-    border: 4px solid #9b460e;
+    border: 4px solid #e1ecd6;
 }
 
 label{
     font-size: 25px;
     font-weight: bold;
+    text-shadow: rgb(90, 90, 90) 2px 0px 0px, rgb(90, 90, 90) 1.75517px 0.958851px 0px, rgb(90, 90, 90) 1.0806px 1.68294px 0px, rgb(90, 90, 90) 0.141474px 1.99499px 0px, rgb(90, 90, 90) -0.832294px 1.81859px 0px, rgb(90, 90, 90) -1.60229px 1.19694px 0px, rgb(90, 90, 90) -1.97998px 0.28224px 0px, rgb(90, 90, 90) -1.87291px -0.701566px 0px, rgb(90, 90, 90) -1.30729px -1.5136px 0px, rgb(90, 90, 90) -0.421592px -1.95506px 0px, rgb(90, 90, 90) 0.567324px -1.91785px 0px, rgb(90, 90, 90) 1.41734px -1.41108px 0px, rgb(90, 90, 90) 1.92034px -0.558831px 0px;
+
     display: grid;
     place-items: center;
-    color: white;
+    color: rgb(255, 255, 255);
     height: 40px;
     width: 80px;
 }
@@ -77,8 +79,8 @@ input::-webkit-inner-spin-button{
 #botao-calcular{
     border: none;
     border-radius: 20px;
-    background-color: #EDFFD9;
-    border: 2px solid #c2855c;
+    background-color: #e1ecd6;
+    border: 2px solid #e1ecd6;
     font-size: 20px;
     font-weight: bold;
     height: 40px;
@@ -103,7 +105,7 @@ input::-webkit-inner-spin-button{
     width: 350px;
     background-color: #ffffff;
     text-align: center;
-    border: 2px solid #DB9D47;
+    border: 2px solid #e1ecd6;
     border-radius: 20px;
     margin-bottom: 10px;
 }
