@@ -59,3 +59,12 @@ function mostrarValorTela(nome, resultado, calculo) {
   let mostrarValor = document.getElementById("resultado");
   mostrarValor.textContent = `Olá ${nome}, sua pontuação IMC foi de ${calculo} que corresponde à ${resultado}`;
 }
+
+function tabelaOnOff() {
+  var tabela = document.getElementById("tabela-IMC");
+
+  if (tabela.style.display == "block") {
+    return (tabela.style.display = "none");
+  }
+  return (tabela.style.display = "block");
+}

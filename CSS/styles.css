@@ -8,20 +8,62 @@
 body {
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 6%, rgba(37,100,95,1) 100%, rgba(0,212,255,1) 100%);    margin: 0;
-}
-
-section{
-    display: grid;
-    place-items: center;
     height: 100vh;
+    width: 100vw;
 }
 
 #corpo-aplicacao{
     display: grid;
+    grid-template-columns: 35vw 30vw 35vw;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: 
+    ". . ." 
+    "tabela calculadora ." 
+    ". . .";
     place-items: center;
+}
+
+#tabela-IMC{
+    display: none;
+    justify-self: end;
+    grid-area: tabela;
     background-color: #7cd7cf;
+    border: 4px solid #e1ecd6;
+    border-radius: 20px;
+    height: 200px;
+    width: 480px;
+    grid-column: 1/2;
+}
+
+#pontuacoes{
+    background-color:#e1ecd6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    height: 100px;
+    /*formatação texto */
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: bold;
+    text-shadow: rgb(90, 90, 90) 2px 0px 0px, rgb(90, 90, 90) 1.75517px 0.958851px 0px, rgb(90, 90, 90) 1.0806px 1.68294px 0px, rgb(90, 90, 90) 0.141474px 1.99499px 0px, rgb(90, 90, 90) -0.832294px 1.81859px 0px, rgb(90, 90, 90) -1.60229px 1.19694px 0px, rgb(90, 90, 90) -1.97998px 0.28224px 0px, rgb(90, 90, 90) -1.87291px -0.701566px 0px, rgb(90, 90, 90) -1.30729px -1.5136px 0px, rgb(90, 90, 90) -0.421592px -1.95506px 0px, rgb(90, 90, 90) 0.567324px -1.91785px 0px, rgb(90, 90, 90) 1.41734px -1.41108px 0px, rgb(90, 90, 90) 1.92034px -0.558831px 0px;
+}
+
+.lista{
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+
+#calculadora-IMC{
+    grid-area: calculadora;
+    display: grid;
+    place-items: center;
     height: 540px;
     width: 400px;
+    background-color: #7cd7cf;
     border: 4px solid #e1ecd6;
     border-radius: 20px;
 }
@@ -51,7 +93,6 @@ label{
     font-size: 25px;
     font-weight: bold;
     text-shadow: rgb(90, 90, 90) 2px 0px 0px, rgb(90, 90, 90) 1.75517px 0.958851px 0px, rgb(90, 90, 90) 1.0806px 1.68294px 0px, rgb(90, 90, 90) 0.141474px 1.99499px 0px, rgb(90, 90, 90) -0.832294px 1.81859px 0px, rgb(90, 90, 90) -1.60229px 1.19694px 0px, rgb(90, 90, 90) -1.97998px 0.28224px 0px, rgb(90, 90, 90) -1.87291px -0.701566px 0px, rgb(90, 90, 90) -1.30729px -1.5136px 0px, rgb(90, 90, 90) -0.421592px -1.95506px 0px, rgb(90, 90, 90) 0.567324px -1.91785px 0px, rgb(90, 90, 90) 1.41734px -1.41108px 0px, rgb(90, 90, 90) 1.92034px -0.558831px 0px;
-
     display: grid;
     place-items: center;
     color: rgb(255, 255, 255);
@@ -76,6 +117,27 @@ input::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
 
+#botoes{
+    display: flex;
+}
+
+#botao-tabela-IMC{
+    border: none;
+    border-radius: 20px;
+    background-color: #e1ecd6;
+    border: 2px solid #e1ecd6;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    margin-right: 20px;
+    width: 55px;
+}
+
+.imagem-balança {
+    height: 20px;
+    width: 20px;
+}
+
 #botao-calcular{
     border: none;
     border-radius: 20px;
@@ -87,15 +149,14 @@ input::-webkit-inner-spin-button{
     width: 120px;
 }
 
-#botao-calcular:hover{
+#botao-calcular:hover, #botao-tabela-IMC:hover{
     background-color: #ffc06d;
 }
 
-#botao-calcular:active{
+#botao-calcular:active, #botao-tabela-IMC:active{
     color: white;
     background-color: rgb(0, 0, 0);
 }
-
 
 .saida{
     display: grid;
