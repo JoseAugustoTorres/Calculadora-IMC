@@ -10,6 +10,8 @@ function verificaValores(nome, altura, peso) {
   var letrasAlfabeto = /^[A-zÀ-ÿ]+$/;
   //Poderia ser escrito >> altura = Number(altura.replace(".",".")); <<
   //Mas para melhor visualização do que está sendo feito, escolhi separar em linhas.
+  nome = nome.trim();
+  console.log(nome);
   altura = altura.replace(",", ".");
   altura = Number(altura);
   peso = peso.replace(",", ".");
