@@ -184,7 +184,7 @@ input::-webkit-inner-spin-button{
     @media (max-width: 1000px){
         #corpo-aplicacao{
             grid-template-columns:100vw;
-            grid-template-rows: 5vh 80vh 5vh;
+            grid-template-rows: 5vh 70vh 10vh;
             grid-template-areas: 
             "." 
             "calculadora" 
@@ -194,6 +194,19 @@ input::-webkit-inner-spin-button{
 
         #tabela-IMC{
             justify-self: center;
+            width: 60vw;
+            height: 25vw;
+        }
+
+        #pontuacoes{
+            width: 50vw;
+            height: 20vw;
+            
+        }
+
+        .lista{
+            font-size: 25px;
+            align-self: center;
         }
 
         #calculadora-IMC{
