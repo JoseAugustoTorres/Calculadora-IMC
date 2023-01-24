@@ -50,8 +50,7 @@ function calcularResultado(nome, altura, peso) {
       resultado = "OBESIDADE GRAVE";
       break;
     default:
-      alert("Erro interno");
-      break;
+      return alert("Erro interno");
   }
 
   mostrarValorTela(nome, resultado, calculo);
