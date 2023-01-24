@@ -61,21 +61,24 @@ body {
     grid-area: calculadora;
     display: grid;
     place-items: center;
-    height: 540px;
-    width: 400px;
+    min-height: 550px;
+    min-width: 400px;
     background-color: #7cd7cf;
     border: 4px solid #e1ecd6;
     border-radius: 20px;
 }
 
 #titulo{
-    border-bottom: 4px solid #fffedf;
+    display: flex;
     color: rgb(51, 51, 51);
     font-size: 27px;
     font-weight: bold;
-    padding: 10px 0px 20px 0px;
-    text-align: center;
+    place-content: center;
+    place-items: center;
     width: 100%;
+    height: 100%;
+    border-bottom: 4px solid #fffedf;
+    margin: 10px 0 10px 0;
 }
 
 .entrada{
@@ -84,7 +87,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 68%;
+    height: 7vh;
+    min-width: 300px;
     border-radius: 20px;
     border: 4px solid #e1ecd6;
 }
@@ -97,13 +101,13 @@ label{
     place-items: center;
     color: rgb(255, 255, 255);
     height: 40px;
-    width: 80px;
+    width: 50%;
 }
 
 input{
     text-align: center;
-    margin: 20px;
-    width: 100px;
+    margin-right: 2vw;
+    width: 50%;
     height: 30px;
     border: none;
     border-radius: 20px;
@@ -119,6 +123,9 @@ input::-webkit-inner-spin-button{
 
 #botoes{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1vw;
 }
 
 #botao-tabela-IMC{
@@ -129,13 +136,15 @@ input::-webkit-inner-spin-button{
     font-size: 20px;
     font-weight: bold;
     height: 40px;
-    margin-right: 20px;
+    margin: 20px;
     width: 55px;
 }
 
-.imagem-balança {
-    height: 20px;
-    width: 20px;
+.imagem-balanca {
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
 }
 
 #botao-calcular{
@@ -170,3 +179,64 @@ input::-webkit-inner-spin-button{
     border-radius: 20px;
     margin-bottom: 10px;
 }
+
+    @media (max-width: 1000px){
+        #corpo-aplicacao{
+            grid-template-columns:100vw;
+            grid-template-rows: 10vh 80vh 10vh;
+            grid-template-areas: 
+            "." 
+            "calculadora" 
+            "tabela";
+            place-content: center;
+        }
+
+        #calculadora-IMC{
+            min-height: 60vh;
+            min-width: 70vw;
+            grid-template-rows: 10vh 12vh 12vh 12vh 10vh 10vh;
+        }
+
+        #titulo{
+            font-size: 5vw;
+        }
+
+        .entrada{
+            min-width: 65vw;
+            min-height: 9vh;
+        }
+
+        label, input{
+            min-width: 10vw;
+            min-height: 5vh;
+            font-size: 4vw;
+        }
+
+        #botoes{
+            min-width: 60vw;
+            min-height: 10vh;
+        }
+
+        #botao-tabela-IMC{
+            min-height: 100px;
+            min-width: 100px;
+            padding: 0;
+        }
+
+        .imagem-balanca{
+            min-height: 100px;
+            min-width: 100px;
+        }
+
+        #botao-calcular{
+            min-height: 100px;
+            min-width: 250px;
+            font-size: 4vw;
+        }
+
+        .saida{
+            min-height: 8vh;
+            min-width: 500px;
+            font-size: 2.7vw;
+        }
+    }
