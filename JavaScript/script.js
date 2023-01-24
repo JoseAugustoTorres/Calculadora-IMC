@@ -65,8 +65,8 @@ function mostrarValorTela(nome, resultado, calculo) {
 function tabelaOnOff() {
   var tabela = document.getElementById("tabela-IMC");
 
-  if (tabela.style.display == "block") {
+  if (tabela.style.display == "flex") {
     return (tabela.style.display = "none");
   }
-  return (tabela.style.display = "block");
+  return (tabela.style.display = "flex");
 }
